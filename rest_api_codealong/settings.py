@@ -23,11 +23,13 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 DEBUG = True
 
 ALLOWED_HOSTS = ['8000-parbelaez-restapicodeal-bfc7jd6lvxq.ws-eu105.gitpod.io',
-    '8000-parbelaez-restapicodeal-bfc7jd6lvxq.ws-eu106.gitpod.io'
+    '8000-parbelaez-restapicodeal-bfc7jd6lvxq.ws-eu106.gitpod.io',
+    '127.0.0.1'
 ]
 
 CSRF_TRUSTED_ORIGINS=['https://8000-parbelaez-restapicodeal-bfc7jd6lvxq.ws-eu105.gitpod.io',
-    'https://8000-parbelaez-restapicodeal-bfc7jd6lvxq.ws-eu106.gitpod.io'
+    'https://8000-parbelaez-restapicodeal-bfc7jd6lvxq.ws-eu106.gitpod.io',
+    'http://127.0.0.1:8000/'
 ]
 
 
@@ -45,7 +47,8 @@ INSTALLED_APPS = [
     'rest_framework',
 
     'profiles',
-    'posts'
+    'posts',
+    'comments'
 ]
 
 MIDDLEWARE = [
