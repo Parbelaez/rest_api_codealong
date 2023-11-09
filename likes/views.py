@@ -1,4 +1,4 @@
-from resst_framework import generics, permissions
+from rest_framework import generics, permissions
 from rest_api_codealong.permissions import IsOwnerOrReadOnly
 from likes.models import Like
 from likes.serializers import LikeSerializer
