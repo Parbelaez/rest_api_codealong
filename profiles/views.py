@@ -1,5 +1,6 @@
 from django.db.models import Count
 from rest_framework import generics, filters
+from django_filters.rest_framework import DjangoFilterBackend
 from rest_api_codealong.permissions import IsOwnerOrReadOnly
 from .models import Profile
 from .serializers import ProfileSerializer
@@ -19,6 +20,7 @@ class ProfileList(generics.ListAPIView):
     serializer_class = ProfileSerializer
     filter_backends = [
         filters.OrderingFilter,
+        DjangoFilterBackend,
         ]
     ordering_fields = [
         'posts_count',
@@ -27,7 +29,9 @@ class ProfileList(generics.ListAPIView):
         'owner__following__created_at',
         'owner__followed__created_at',
         ]
-
+    filter_fields = [
+        'owner__following__followed__profile',
+        ]
 class ProfileDetails(generics.RetrieveUpdateAPIView):
     """
     Retrieve, update or delete a profile instance.
