@@ -31,6 +31,7 @@ class ProfileList(generics.ListAPIView):
         ]
     filter_fields = [
         'owner__following__followed__profile',
+        'owner__followed__owner__profile',
         ]
 class ProfileDetails(generics.RetrieveUpdateAPIView):
     """
