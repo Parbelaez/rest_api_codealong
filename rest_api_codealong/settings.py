@@ -53,13 +53,13 @@ ALLOWED_HOSTS = ['8000-parbelaez-restapicodeal-bfc7jd6lvxq.ws-eu105.gitpod.io',
     '8000-parbelaez-restapicodeal-bfc7jd6lvxq.ws-eu106.gitpod.io',
     '127.0.0.1',
     'localhost',
-    'rest-api-codealong.herokuapp.com',
+    'rest-api-codealong-01d46e3fe694.herokuapp.com',
 ]
 
 CSRF_TRUSTED_ORIGINS=['https://8000-parbelaez-restapicodeal-bfc7jd6lvxq.ws-eu105.gitpod.io',
     'https://8000-parbelaez-restapicodeal-bfc7jd6lvxq.ws-eu106.gitpod.io',
     'http://127.0.0.1:8000/',
-    'https://rest-api-codealong.herokuapp.com',
+    'https://rest-api-codealong-01d46e3fe694.herokuapp.com',
 ]
 
 
